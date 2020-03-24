@@ -1,30 +1,16 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { useSelector } from "react-redux";
+// import Topbar from "../components/Layout/Topbar";
+import FilterBar from "../components/FilterBar";
+import Simple from "../components/Simple";
 
-import Medicament from "../components/Medicament";
-import Info from "../components/Info";
-import FindDrugstore from "../components/FindDrugstore";
-import PrescriptionHead from "../components/PrescriptionHead";
+import React from "react";
+import { Container } from "@material-ui/core";
 
-const Page = ({ className }) => {
-  const prescription = useSelector(state => state.prescription);
+export default function MenuAppBar() {
   return (
     <>
-      <PrescriptionHead date={prescription.date}></PrescriptionHead>
-      <div className={className}>
-        {prescription.medicaments.map((props, key) => (
-          <Medicament {...props} key={key} />
-        ))}
-        <Info />
-      </div>
-      <FindDrugstore />
+      {/* <Topbar /> */}
+      <FilterBar />
+      <Simple />
     </>
   );
-};
-
-Page.propTypes = {
-  className: PropTypes.string
-};
-
-export default Page;
+}

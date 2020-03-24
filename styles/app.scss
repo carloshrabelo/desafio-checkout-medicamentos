@@ -11,6 +11,9 @@
   #__next {
     background-color: $body-bg;
     color: $strong-color;
+
+    display: 'flex';
+    flex-grow: 1;
     font-family: $font-family;
     font-size: $font-size-base;
     font-weight: 300;
