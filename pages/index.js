@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
-import Medicament from "../components/Medicament";
-import Info from "../components/Info";
-import FindDrugstore from "../components/FindDrugstore";
-import PrescriptionHead from "../components/PrescriptionHead";
+import Medicament from "components/Medicament";
+import Info from "components/Info";
+import FindDrugstore from "components/FindDrugstore";
+import PrescriptionHead from "components/PrescriptionHead";
 
 const Page = ({ className }) => {
-  const prescription = useSelector(state => state.prescription);
+  const prescription = useSelector((state) => state.prescription);
   return (
     <>
       <PrescriptionHead date={prescription.date}></PrescriptionHead>
@@ -24,7 +24,7 @@ const Page = ({ className }) => {
 };
 
 Page.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default Page;
