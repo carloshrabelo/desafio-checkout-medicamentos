@@ -1,5 +1,11 @@
 {
-  "extends": "stylelint-config-sass-guidelines",
+  "processors": [
+    "stylelint-processor-styled-components"
+  ],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
   "rules": {
     "selector-max-id": 1,
     "max-nesting-depth": 3,

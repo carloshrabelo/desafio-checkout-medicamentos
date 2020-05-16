@@ -1,21 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Router from "next/router";
-import style from "./Header.scss";
+import * as S from "./Style";
 
 const Header = ({ children }) => (
-  <div className={style.header}>
-    <div className={style.icon} onClick={() => Router.back()}>
-      ◀
-    </div>
-    <div className={style.content}>{children}</div>
-  </div>
+  <S.Header>
+    <S.Icon onClick={() => Router.back()}>◀</S.Icon>
+    <S.Content>{children}</S.Content>
+  </S.Header>
 );
 
 Header.propTypes = {
   icon: PropTypes.node,
   children: PropTypes.any,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default Header;

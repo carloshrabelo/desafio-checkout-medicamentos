@@ -1,25 +1,26 @@
 module.exports = {
   env: {
+    jest: true,
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   extends: [
     "plugin:react/recommended",
     "prettier/flowtype",
     "prettier/react",
-    "prettier/standard"
+    "prettier/standard",
   ],
   globals: {
     Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    SharedArrayBuffer: "readonly",
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: "module",
   },
   plugins: ["react", "eslint-plugin-import"],
   rules: {
@@ -30,9 +31,9 @@ module.exports = {
         groups: [
           ["external", "builtin"],
           ["parent", "sibling", "index"],
-          "internal"
-        ]
-      }
-    ]
-  }
+          "internal",
+        ],
+      },
+    ],
+  },
 };

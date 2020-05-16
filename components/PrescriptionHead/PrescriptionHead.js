@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import style from "./PrescriptionHead.scss";
+import * as S from "./Style";
 
 const PrescriptionHead = ({ date }) => (
-  <div className={style.head}>
-    <h1 className={style.title}>Dr. Memed</h1>
+  <S.Head>
+    <S.Title>Dr. Memed</S.Title>
     <span>Prescrição criada em {date}</span>
-  </div>
+  </S.Head>
 );
 
 PrescriptionHead.propTypes = {
-  date: PropTypes.string
+  date: PropTypes.string,
 };
 export default PrescriptionHead;

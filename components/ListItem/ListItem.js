@@ -1,21 +1,20 @@
 import React from "react";
-import classNames from "classnames";
 import PropTypes from "prop-types";
-import style from "./ListItem.scss";
+import * as S from "./Style";
 
 const ListItem = ({ icon, children, className }) => {
   return (
-    <div className={classNames(style["list-item"], className)}>
-      {icon && <div className={style.icon}>{icon}</div>}
+    <S.ListItem className={className}>
+      {icon && <S.Icon>{icon}</S.Icon>}
       <div>{children}</div>
-    </div>
+    </S.ListItem>
   );
 };
 
 ListItem.propTypes = {
   icon: PropTypes.node,
   children: PropTypes.any,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default ListItem;

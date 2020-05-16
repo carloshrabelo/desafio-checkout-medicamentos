@@ -1,11 +1,11 @@
 import React from "react";
-import style from "./Info.scss";
+import * as S from "./Style";
 
 const Info = () => (
-  <div className={style.info}>
+  <S.Info>
     A prescrição Digital Memed não dispensa a apresentação de sua versão
     impressa à farmácia. O médico repsonsável por esta prescrição não possui
     qualquer tipo de vínculo com os preços e/ou farmácias apresentados.
-  </div>
+  </S.Info>
 );
 export default Info;

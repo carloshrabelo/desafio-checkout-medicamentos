@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import style from "./FindDrugstore.scss";
+import * as S from "./Style";
 
 const coord = {
   lat: -23.5648304,
@@ -9,11 +9,11 @@ const coord = {
 };
 const FindDrugstore = () => (
   <Link href={`/drugstores?${new URLSearchParams(coord).toString()}`}>
-    <div className={style.find}>
+    <S.FindDrugstore>
       <b>Encontrar Farmácias</b>
       <br />
       <span>Serviço oferecido por Memed</span>
-    </div>
+    </S.FindDrugstore>
   </Link>
 );
 export default FindDrugstore;

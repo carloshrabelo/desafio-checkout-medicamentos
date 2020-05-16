@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ListItem from "../ListItem";
-import style from "./Medicament.scss";
+import * as S from "./Style";
 import STAMPS from "../../constant/STAMPS";
 
 // https://www.flaticon.com/packs/medicaments-6
@@ -13,15 +13,15 @@ const Medicament = ({ stamp, name, quantity, value }) => {
     value &&
     Intl.NumberFormat("pt-BR", {
       style: "currency",
-      currency: "BRL"
+      currency: "BRL",
     }).format(value);
   return (
     <ListItem icon={<img src={_stamp} />}>
-      <div className={style.quantity}>
+      <S.Quantity>
         {quantity} unidade{_s}
-      </div>
-      <strong className={style.name}>{name}</strong>
-      {_value && <div className={style.value}>{_value}</div>}
+      </S.Quantity>
+      <strong>{name}</strong>
+      {_value && <S.Value>{_value}</S.Value>}
     </ListItem>
   );
 };
@@ -30,7 +30,7 @@ Medicament.propTypes = {
   stamp: PropTypes.string,
   name: PropTypes.string,
   quantity: PropTypes.number,
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 export default Medicament;
