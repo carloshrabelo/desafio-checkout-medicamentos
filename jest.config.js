@@ -25,7 +25,7 @@ module.exports = {
     "*/**",
     "/components/",
     "!<rootDir>/*.{js,json}",
-    "!**/*.json"
+    "!**/*.json",
   ],
 
   // The directory where Jest should output its coverage files
@@ -37,7 +37,7 @@ module.exports = {
     "/.next/",
     "/constant/",
     "/coverage/",
-    "mock"
+    "mock",
   ],
 
   // A list of reporter names that Jest uses when writing coverage reports
@@ -73,9 +73,7 @@ module.exports = {
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  // moduleDirectories: [
-  //   "node_modules"
-  // ],
+  moduleDirectories: ["node_modules", "."],
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [
@@ -91,7 +89,7 @@ module.exports = {
   moduleNameMapper: {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
       "<rootDir>/mock/fileMock.js",
-    "^.+\\.(css|scss)$": "identity-obj-proxy"
+    "^.+\\.(css|scss)$": "identity-obj-proxy",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -188,7 +186,7 @@ module.exports = {
   // unmockedModulePathPatterns: undefined,
 
   // Indicates whether each individual test should be reported during the run
-  verbose: false
+  verbose: false,
 
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
   // watchPathIgnorePatterns: [],
